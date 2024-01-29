@@ -14,5 +14,8 @@ func InicializeRouter() *gin.Engine {
 	r := gin.Default()
 	r.GET("/", WelcomeToCommerceServices)
 
+	//Category module.
+	r.POST("category", CreateCategory)
+
 	return r
 }
