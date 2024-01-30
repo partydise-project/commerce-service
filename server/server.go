@@ -17,5 +17,7 @@ func InicializeRouter() *gin.Engine {
 	//Category module.
 	r.POST("category", CreateCategory)
 
+	//PlanEvent module.
+	r.POST("/plan-event", CreatePlanEvent)
 	return r
 }

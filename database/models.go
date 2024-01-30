@@ -13,7 +13,7 @@ type CategoriaEvento struct {
 type PlanEvento struct {
 	gorm.Model
 	Nombre            string          `json:"nombre"`
-	Precio            float32         `json:"precio"`
+	Precio            float64         `json:"precio"`
 	Decoracion        bool            `json:"decoracion"`
 	Pintucaritas      bool            `json:"pintucaritas"`
 	HoraLoca          bool            `json:"hora_loca"`
