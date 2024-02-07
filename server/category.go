@@ -27,3 +27,33 @@ func CreateCategory(c *gin.Context) {
 
 	c.JSON(201, categoryCreateDTO)
 }
+
+func ReadCategoriesPublished(c *gin.Context) {
+	categories, err := database.ReadCategoriesPublished()
+	if err != nil {
+		c.JSON(500, gin.H{"Error consulting the categories": err})
+		return
+	}
+
+	c.JSON(200, categories)
+}
+
+func ReadCategoriesPublishedAdults(c *gin.Context) {
+	categories, err := database.ReadCategoriesPublishedAdults()
+	if err != nil {
+		c.JSON(500, gin.H{"Error consulting the categories of adults": err})
+		return
+	}
+
+	c.JSON(200, categories)
+}
+
+func ReadCategoriesPublishedChildrens(c *gin.Context) {
+	categories, err := database.ReadCategoriesPublishedChildrens()
+	if err != nil {
+		c.JSON(500, gin.H{"Error consulting the categories of childrens": err})
+		return
+	}
+
+	c.JSON(200, categories)
+}

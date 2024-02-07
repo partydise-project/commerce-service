@@ -16,6 +16,9 @@ func InicializeRouter() *gin.Engine {
 
 	//Category module.
 	r.POST("category", CreateCategory)
+	r.GET("categories-published", ReadCategoriesPublished)
+	r.GET("categories-published-adults", ReadCategoriesPublishedAdults)
+	r.GET("categories-published-childrens", ReadCategoriesPublishedChildrens)
 
 	//PlanEvent module.
 	r.POST("/plan-event", CreatePlanEvent)
