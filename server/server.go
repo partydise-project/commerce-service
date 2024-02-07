@@ -22,5 +22,6 @@ func InicializeRouter() *gin.Engine {
 
 	//PlanEvent module.
 	r.POST("/plan-event", CreatePlanEvent)
+	r.GET("plans-published/:id", ReadPlansPublished)
 	return r
 }

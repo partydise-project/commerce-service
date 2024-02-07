@@ -22,7 +22,7 @@ type PlanEvento struct {
 	Recreacion        bool            `json:"recreacion"`
 	Comida            bool            `json:"comida"`
 	Disfraces         string          `json:"disfraces"`
-	Estado            string          `json:"estado"`
+	Estado            bool            `json:"estado"`
 	CategoriaEvento   CategoriaEvento `json:"categoria_evento"`
 	CategoriaEventoID uint            `json:"categoria_evento_ID" gorm:"not null"`
 }

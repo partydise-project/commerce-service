@@ -26,3 +26,13 @@ func CreatePlanEvent(c *gin.Context) {
 
 	c.JSON(201, plaEvent)
 }
+
+func ReadPlansPublished(c *gin.Context) {
+	plans, err := database.ReadPlansEventPublished(c.Param("id"))
+	if err != nil {
+		c.JSON(500, gin.H{"error consulting plans": err})
+		return
+	}
+
+	c.JSON(200, plans)
+}

@@ -9,9 +9,9 @@ func CreatePlanEvent(plan *PlanEvento) error {
 	return nil
 }
 
-func ReadPlanEventPublished(idCategory uint) ([]PlanEvento, error) {
+func ReadPlansEventPublished(idCategory string) ([]PlanEvento, error) {
 	var plans []PlanEvento
-	if err := DB.Where("categoria_id = ? AND estado = ?", idCategory, true).Find(&plans).Error; err != nil {
+	if err := DB.Where("categoria_evento_id = ? AND estado = ?", idCategory, true).Find(&plans).Error; err != nil {
 		return nil, err
 	}
 
